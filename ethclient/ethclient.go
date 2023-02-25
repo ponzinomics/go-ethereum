@@ -211,6 +211,20 @@ func (tx *rpcTransaction) UnmarshalJSON(msg []byte) error {
 	return json.Unmarshal(msg, &tx.txExtraInfo)
 }
 
+// TransactionByHashFast returns the transaction with the given hash.
+func (ec *Client) TransactionByHashFast(ctx context.Context, hash common.Hash) (tx *types.TransactionFast, isPending bool, err error) {
+	var json *types.TransactionFast
+	err = ec.c.CallContext(ctx, &json, "eth_getTransactionByHash", hash)
+	if err != nil {
+		return nil, false, err
+	} else if json == nil {
+		return nil, false, ethereum.NotFound
+	} else if r := json.RawSignatureValues(); r == nil {
+		return nil, false, fmt.Errorf("server returned transaction without signature")
+	}
+	return json, json.BlockNumber == 0, nil
+}
+
 // TransactionByHash returns the transaction with the given hash.
 func (ec *Client) TransactionByHash(ctx context.Context, hash common.Hash) (tx *types.Transaction, isPending bool, err error) {
 	var json *rpcTransaction
