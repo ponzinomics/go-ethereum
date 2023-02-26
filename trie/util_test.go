@@ -20,9 +20,9 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	"github.com/ethereum/go-ethereum/core/types"
+	"github.com/ponzinomics/go-ethereum/common"
+	"github.com/ponzinomics/go-ethereum/core/rawdb"
+	"github.com/ponzinomics/go-ethereum/core/types"
 )
 
 // Tests if the trie diffs are tracked correctly.

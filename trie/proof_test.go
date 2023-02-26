@@ -24,10 +24,10 @@ import (
 	"sort"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/ethdb/memorydb"
+	"github.com/ponzinomics/go-ethereum/common"
+	"github.com/ponzinomics/go-ethereum/core/rawdb"
+	"github.com/ponzinomics/go-ethereum/crypto"
+	"github.com/ponzinomics/go-ethereum/ethdb/memorydb"
 )
 
 // makeProvers creates Merkle trie provers based on different implementations to

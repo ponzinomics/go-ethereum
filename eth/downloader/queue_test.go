@@ -24,13 +24,13 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/consensus/ethash"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/params"
-	"github.com/ethereum/go-ethereum/trie"
+	"github.com/ponzinomics/go-ethereum/common"
+	"github.com/ponzinomics/go-ethereum/consensus/ethash"
+	"github.com/ponzinomics/go-ethereum/core"
+	"github.com/ponzinomics/go-ethereum/core/types"
+	"github.com/ponzinomics/go-ethereum/log"
+	"github.com/ponzinomics/go-ethereum/params"
+	"github.com/ponzinomics/go-ethereum/trie"
 )
 
 // makeChain creates a chain of n blocks starting at and including parent.

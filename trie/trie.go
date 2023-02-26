@@ -22,9 +22,9 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/ponzinomics/go-ethereum/common"
+	"github.com/ponzinomics/go-ethereum/core/types"
+	"github.com/ponzinomics/go-ethereum/log"
 )
 
 // Trie is a Merkle Patricia Trie. Use New to create a trie that sits on

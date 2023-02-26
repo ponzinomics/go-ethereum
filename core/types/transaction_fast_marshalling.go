@@ -22,8 +22,8 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
+	"github.com/ponzinomics/go-ethereum/common"
+	"github.com/ponzinomics/go-ethereum/common/hexutil"
 )
 
 // txJSON is the JSON representation of transactions.
@@ -39,11 +39,11 @@ type txFastJSON struct {
 	Value                *hexutil.Big    `json:"value"`
 	Data                 *hexutil.Bytes  `json:"input"`
 	R                    *hexutil.Big    `json:"r"`
-	To                   *string `json:"to"`
-	From                 *string `json:"from,omitempty"`
+	To                   *string         `json:"to"`
+	From                 *string         `json:"from,omitempty"`
 
 	// Access list transaction fields:
-	ChainID    *hexutil.Uint64 `json:"chainId,omitempty"`
+	ChainID     *hexutil.Uint64 `json:"chainId,omitempty"`
 	BlockNumber *hexutil.Uint64 `json:"blockNumber,omitempty"`
 
 	// Only used for encoding:

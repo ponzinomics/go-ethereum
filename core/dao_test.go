@@ -20,10 +20,10 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/consensus/ethash"
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	"github.com/ethereum/go-ethereum/core/vm"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/ponzinomics/go-ethereum/consensus/ethash"
+	"github.com/ponzinomics/go-ethereum/core/rawdb"
+	"github.com/ponzinomics/go-ethereum/core/vm"
+	"github.com/ponzinomics/go-ethereum/params"
 )
 
 // Tests that DAO-fork enabled clients can properly filter out fork-commencing

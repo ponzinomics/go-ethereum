@@ -20,8 +20,8 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/ponzinomics/go-ethereum/common"
+	"github.com/ponzinomics/go-ethereum/rlp"
 )
 
 //var (
@@ -42,19 +42,19 @@ import (
 
 // TransactionFast is an Ethereum transaction whose only purpose is for analysis in ponzinomics.
 type TransactionFast struct {
-	time  time.Time
-	nonce uint64
-	hash common.Hash
-	data []byte
-	gas  uint64
-	gasPrice *big.Int
-	value *big.Int
-	r *big.Int
-	from string
-	to string
-	Type uint64
+	time        time.Time
+	nonce       uint64
+	hash        common.Hash
+	data        []byte
+	gas         uint64
+	gasPrice    *big.Int
+	value       *big.Int
+	r           *big.Int
+	from        string
+	to          string
+	Type        uint64
 	BlockNumber uint64
-	chain uint64
+	chain       uint64
 }
 
 // NewTx creates a new transaction.
@@ -141,7 +141,6 @@ func (tx *TransactionFast) Gas() uint64 { return tx.gas }
 // GasPrice returns the gas price of the transaction.
 func (tx *TransactionFast) GasPrice() *big.Int { return new(big.Int).Set(tx.gasPrice) }
 
-
 // Value returns the ether amount of the transaction.
 func (tx *TransactionFast) Value() *big.Int { return new(big.Int).Set(tx.value) }
 
@@ -223,8 +222,6 @@ type TxByNonceFast TransactionsFast
 func (s TxByNonceFast) Len() int           { return len(s) }
 func (s TxByNonceFast) Less(i, j int) bool { return s[i].Nonce() < s[j].Nonce() }
 func (s TxByNonceFast) Swap(i, j int)      { s[i], s[j] = s[j], s[i] }
-
-
 
 // copyAddressPtr copies an address.
 //func copyAddressPtr(a *common.Address) *common.Address {
