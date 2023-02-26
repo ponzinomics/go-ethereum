@@ -219,6 +219,7 @@ func (t *TransactionFast) UnmarshalJSON(input []byte) error {
 
 	// Now set the inner transaction.
 	t.time = time.Now()
+	t.hash = dec.Hash
 
 	// TODO: check hash here?
 	return nil
